@@ -41,3 +41,16 @@ spotify_client_id: xxxx
 spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
 ```
+
+- Check live log
+
+```
+tail -f /var/log/daemon.log | grep SpotifyAlertFR
+```
+
+- Check old log
+
+```
+grep SpotifyAlertFR /var/log/daemon*
+zgrep SpotifyAlertFR /var/log/daemon*
+```

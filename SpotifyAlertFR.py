@@ -1,5 +1,6 @@
 """
 Spotify Twitter Bot - SpotifyAlertFR
+2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlertFR && /usr/bin/python3 /root/scripts/SpotifyAlertFR/SpotifyAlertFR.py >> /var/log/SpotifyAlertFR.log 2>&1
 """
 
 from requests_oauthlib import OAuth1Session
@@ -180,7 +181,7 @@ def check_for_artiste(artist_id, twitter, limit=5):
 
         else:
             msg = 'Album already exist on DB {}: {} - {}'
-            logger.info(msg.format(release['id'], artist_name,
+            logger.debug(msg.format(release['id'], artist_name,
                                                   release['release_date']))
 
 
