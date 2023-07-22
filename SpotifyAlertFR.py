@@ -204,3 +204,5 @@ if __name__ == "__main__":
 
     for artiste in ARTISTES:
         check_for_artiste(artiste['id'], artiste['twitter'])
+
+    logger.info(f"{n} ended")
