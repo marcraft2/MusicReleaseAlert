@@ -40,6 +40,7 @@ twitter_access_token_secret: xxxx
 spotify_client_id: xxxx
 spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
+database_file: /var/SpotifyAlertFR/spotify.db
 ```
 
 - Set cron
