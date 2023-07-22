@@ -7,9 +7,9 @@ from logging.handlers import SysLogHandler
 from spotipy.oauth2 import SpotifyOAuth
 from configparser import ConfigParser
 from twitter_text import parse_tweet
-import spotipy
 import sqlite3
 import logging
+import spotipy
 import tweepy
 import json
 import os
