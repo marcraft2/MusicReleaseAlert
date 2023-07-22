@@ -28,13 +28,13 @@ DEFAULT_CONFIG = {
         "spotify_redirect_uri": "YOUR SPOTIFY redirect_uri",
         "log_level": "info",
         "log_address": "/dev/log",
-        "log_facility": "daemon"
+        "log_facility": "daemon",
+        "database_file": '/var/SpotifyAlertFR/spotify.db'
     }
 }
 
 def add_album(artist_id, artist_name, album_id, album_name, album_d, album_t):
-    database_file = '/var/SpotifyAlertFR/spotify.db'
-    conn = sqlite3.connect(database_file)
+    conn = sqlite3.connect(config["database_file"])
     cursor = conn.cursor()
     insert_query = """
     INSERT INTO last_release (artist_id, artist_name, album_id,
@@ -55,8 +55,7 @@ def add_album(artist_id, artist_name, album_id, album_name, album_d, album_t):
         conn.close()
 
 def album_exist(album_id):
-    database_file = '/tmp/spotify.db'
-    conn = sqlite3.connect(database_file)
+    conn = sqlite3.connect(config["database_file"])
     cursor = conn.cursor()
     select_query = "SELECT COUNT(*) FROM last_release WHERE album_id = ?"
     data = (album_id,)
