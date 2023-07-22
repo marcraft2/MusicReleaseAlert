@@ -1,6 +1,6 @@
 """
 Spotify Twitter Bot
-""""
+"""
 
 from requests_oauthlib import OAuth1Session
 from logging.handlers import SysLogHandler
