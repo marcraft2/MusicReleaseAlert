@@ -1,4 +1,6 @@
-"""Listes d'artistes""""
+"""
+Listes d'artistes
+""""
 
 ARTISTES = [
     {'twitter': '@OBOYofficiel', 'id': '66Ok6bgC570sHkw08N20pZ'}, # Oboy
