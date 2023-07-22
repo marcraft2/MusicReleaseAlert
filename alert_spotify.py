@@ -165,7 +165,7 @@ def gen_artist_latest_releases(artist_id, twitter, limit=5):
                                   convert_duration(r_track['duration_ms']))
                 else:
                     new_line = " • {} - {}\n".format(item['name'],
-                                         convert_duration(r['duration_ms']))
+                                    convert_duration(r_track['duration_ms']))
 
                 if parse_tweet(TWEET+new_line).asdict()['weightedLength'] < 250:
                     TWEET = TWEET + new_line
