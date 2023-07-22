@@ -157,17 +157,17 @@ def gen_artist_latest_releases(artist_id, twitter, limit=5):
                 except:
                     pass
 
-                if parse_tweet(TWEET+new_line).asdict()['weightedLength'] < 250:
-                    if len(artites_lists):
-                        r_track = sp.track(item['id'])
-                        new_line = " • {} (feat {}) - {}\n" \
-                              .format(item['name'],
-                                      ', '.join(artites_lists),
-                                      convert_duration(r_track['duration_ms']))
-                    else:
-                        new_line = " • {} - {}\n".format(item['name'],
-                                             convert_duration(r['duration_ms']))
+                if len(artites_lists):
+                    r_track = sp.track(item['id'])
+                    new_line = " • {} (feat {}) - {}\n" \
+                          .format(item['name'],
+                                  ', '.join(artites_lists),
+                                  convert_duration(r_track['duration_ms']))
+                else:
+                    new_line = " • {} - {}\n".format(item['name'],
+                                         convert_duration(r['duration_ms']))
 
+                if parse_tweet(TWEET+new_line).asdict()['weightedLength'] < 250:
                     TWEET = TWEET + new_line
                 else:
                     failed_line = True
