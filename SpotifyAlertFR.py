@@ -148,7 +148,7 @@ def check_for_artiste(artist_id, twitter, limit=5):
 
                 for art in item['artists']:
                     name_ = art['name']
-                    if name_ == artist_name:
+                    if art['id'] == artist_id:
                         continue
                     for artiste in ARTISTES:
                         if art['id'] == artiste['spotify_id']:
