@@ -42,6 +42,16 @@ spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
 ```
 
+- Set cron
+
+```
+crontab -e
+```
+
+```
+2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlertFR && /usr/bin/python3 /root/scripts/SpotifyAlertFR/SpotifyAlertFR.py >> /var/log/SpotifyAlertFR.log 2>&1
+```
+
 - Check live log
 
 ```

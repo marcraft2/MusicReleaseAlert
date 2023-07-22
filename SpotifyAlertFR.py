@@ -1,6 +1,5 @@
 """
 Spotify Twitter Bot - SpotifyAlertFR
-2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlertFR && /usr/bin/python3 /root/scripts/SpotifyAlertFR/SpotifyAlertFR.py >> /var/log/SpotifyAlertFR.log 2>&1
 """
 
 from requests_oauthlib import OAuth1Session
