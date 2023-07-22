@@ -152,7 +152,7 @@ def check_for_artiste(artist_id, twitter, limit=5):
                         continue
                     for artiste in ARTISTES:
                         if art['id'] == artiste['spotify_id']:
-                            name = artiste['twitter_tag']
+                            name_ = artiste['twitter_tag']
                     artites_lists.append(name_)
 
                 r_track = sp.track(item['id'])
