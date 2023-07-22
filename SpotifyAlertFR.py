@@ -45,7 +45,7 @@ def add_album(artist_id, artist_name, album_id, album_name, album_d, album_t):
     try:
         cursor.execute(insert_query, data)
         conn.commit()
-        msg = "Nouvelle album ajoutée avec succès a la DB! {} {} album_id: {}"
+        msg = "Nouvelle album ajoutée avec succès a la DB! {} - {} album_id: {}"
         logger.info(msg.format(artist_name, album_name, album_id))
     except sqlite3.Error as e:
         conn.rollback()
