@@ -193,7 +193,7 @@ if __name__ == "__main__":
     n = 'SpotifyAlertFR'
     cp = ConfigParser()
     cp.read_dict(DEFAULT_CONFIG)
-    cp.read(os.path.join(app.instance_path, f'{n}.cfg'))
+    cp.read(f'/etc/{n}/{n}.cfg')
     config = cp[n]
 
     # Setup syslog logger
