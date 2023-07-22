@@ -72,7 +72,7 @@ def album_exist(album_id):
 def send_tweet(text):
     payload = {"text": text}
     oauth = OAuth1Session(
-        consumer_key=config["twitter_consumer_key"],
+        client_key=config["twitter_consumer_key"],
         client_secret=config["twitter_consumer_secret"],
         resource_owner_key=config["twitter_access_token"],
         resource_owner_secret=config["twitter_access_token_secret"],
