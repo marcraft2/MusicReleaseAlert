@@ -157,13 +157,12 @@ def check_for_artiste(artist_id, twitter, limit=5):
 
                 r_track = sp.track(item['id'])
                 if len(artites_lists):
-                    new_line = " • {} (feat {}) - {}\n" \
-                          .format(item['name'],
-                                  ', '.join(artites_lists),
-                                  convert_duration(r_track['duration_ms']))
+                    new_line = " • {} (feat {}) - {}\n".format(item['name'],
+                                                   ', '.join(artites_lists),
+                                   convert_duration(r_track['duration_ms']))
                 else:
                     new_line = " • {} - {}\n".format(item['name'],
-                                    convert_duration(r_track['duration_ms']))
+                         convert_duration(r_track['duration_ms']))
 
                 if parse_tweet(TWEET+new_line).asdict()['weightedLength'] < 250:
                     TWEET = TWEET + new_line
