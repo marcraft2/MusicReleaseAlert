@@ -173,7 +173,7 @@ def check_for_artiste(artist_id, twitter, limit=5):
                 TWEET = TWEET + '[...]\n'
 
             TWEET = TWEET + release['external_urls']['spotify']
-            send_tweet(TWEET)
+            #send_tweet(TWEET)
             add_album(artist_id, artist_name, release['id'],
                                      release['name'], release['release_date'],
                                      release['album_type'])

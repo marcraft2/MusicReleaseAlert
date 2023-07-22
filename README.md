@@ -1,6 +1,12 @@
 # Spotify Twitter Alert
 
-Create Database:
+## Twitter
+
+https://twitter.com/SpotifyAlertFR
+
+## Use Bot
+
+- Create Database:
 
 ```
 sqlite /var/SpotifyAlertFR/spotify.db
@@ -19,7 +25,7 @@ CREATE TABLE IF NOT EXISTS last_release (
 ```
 
 
-Set Configuration
+- Set Configuration
 
 ```
 nano /etc/SpotifyAlertFR/SpotifyAlertFR.cfg
