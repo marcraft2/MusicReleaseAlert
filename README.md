@@ -63,3 +63,6 @@ tail -f /var/log/daemon.log | grep SpotifyAlertFR
 ```
 zgrep SpotifyAlertFR /var/log/daemon*
 ```
+
+
+For the first run I advise you to comment `send_tweet(TWEET)` otherwise it will send a tweet for each old album. Think all the same to test that your credential twitter works correctly.
