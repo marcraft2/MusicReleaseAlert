@@ -157,8 +157,8 @@ def gen_artist_latest_releases(artist_id, twitter, limit=5):
                 except:
                     pass
 
+                r_track = sp.track(item['id'])
                 if len(artites_lists):
-                    r_track = sp.track(item['id'])
                     new_line = " • {} (feat {}) - {}\n" \
                           .format(item['name'],
                                   ', '.join(artites_lists),
