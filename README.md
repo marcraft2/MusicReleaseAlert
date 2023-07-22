@@ -61,6 +61,5 @@ tail -f /var/log/daemon.log | grep SpotifyAlertFR
 - Check old log
 
 ```
-grep SpotifyAlertFR /var/log/daemon*
 zgrep SpotifyAlertFR /var/log/daemon*
 ```
