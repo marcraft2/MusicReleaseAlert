@@ -147,12 +147,13 @@ def check_for_artiste(artist_id, twitter, limit=5):
                 artites_lists = []
 
                 for art in item['artists']:
-                    artites_lists.append(art['name'])
-
-                try:
-                    artites_lists.remove(artist_name)
-                except:
-                    pass
+                    name_ = art['name']
+                    if name_ == artist_name:
+                        continue
+                    for artiste in ARTISTES:
+                        if art['id'] == artiste['spotify_id']:
+                            name = artiste['twitter_tag']
+                    artites_lists.append(name_)
 
                 r_track = sp.track(item['id'])
                 if len(artites_lists):
@@ -203,6 +204,6 @@ if __name__ == "__main__":
     logger.info(f"{n} started")
 
     for artiste in ARTISTES:
-        check_for_artiste(artiste['id'], artiste['twitter'])
+        check_for_artiste(artiste['spotify_id'], artiste['twitter_tag'])
 
     logger.info(f"{n} ended")
