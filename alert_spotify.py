@@ -1,5 +1,5 @@
 """
-Spotify Twitter Bot
+Spotify Twitter Bot - SpotifyAlertFR
 """
 
 from requests_oauthlib import OAuth1Session
@@ -45,12 +45,11 @@ def add_album(artist_id, artist_name, album_id, album_name, album_d, album_t):
     try:
         cursor.execute(insert_query, data)
         conn.commit()
-        print("Nouvelle album ajoutée avec succès a la DB! {} {} album_id: {}" \
-                                     .format(artist_name, album_name, album_id))
-        print('---------------------')
+        msg = "Nouvelle album ajoutée avec succès a la DB! {} {} album_id: {}"
+        logger.info(msg.format(artist_name, album_name, album_id))
     except sqlite3.Error as e:
         conn.rollback()
-        print("Erreur lors de l'ajout de la release :", e)
+        logger.info("Erreur lors de l'ajout de la release :", e)
     finally:
         conn.close()
 
@@ -65,7 +64,7 @@ def album_exist(album_id):
         conn.close()
         return result[0] > 0
     except sqlite3.Error as e:
-        print("Erreur lors de la vérification de l'artiste :", e)
+        logger.info("Erreur lors de la vérification de l'artiste :", e)
         conn.close()
         return False
 
@@ -93,8 +92,7 @@ def send_tweet(text):
     json_response = response.json()
     str_ = json.dumps(json_response, indent=4, sort_keys=True)
     data = json.loads(str_)
-    print('--------------------------------------------')
-    print(" -> https://twitter.com/SpotifyAlertFR/status/{}" \
+    logger.info(" -> https://twitter.com/SpotifyAlertFR/status/{}" \
                                                     .format(data['data']['id']))
 
 def convert_duration(duration_ms):
@@ -113,7 +111,7 @@ def convert_duration(duration_ms):
 
     return formatted_duration
 
-def gen_artist_latest_releases(artist_id, twitter, limit=5):
+def check_for_artiste(artist_id, twitter, limit=5):
     sp = spotipy.Spotify(
                 auth_manager=SpotifyOAuth(client_id=config["spotify_client_id"],
                                   client_secret=config["spotify_client_secret"],
@@ -175,19 +173,18 @@ def gen_artist_latest_releases(artist_id, twitter, limit=5):
                 TWEET = TWEET + '[...]\n'
 
             TWEET = TWEET + release['external_urls']['spotify']
-            print(TWEET)
-            print('--------------------------------------------')
-            #send_tweet(TWEET)
+            send_tweet(TWEET)
             add_album(artist_id, artist_name, release['id'],
                                      release['name'], release['release_date'],
                                      release['album_type'])
 
         else:
-            print('Album alredy exist on DB')
+            msg = 'Album already exist on DB {}: {} - {}'
+            logger.info(msg.format(release['id'], artist_name,
+                                                  release['release_date']))
 
 
 if __name__ == "__main__":
-
     # Load configuration
     n = 'SpotifyAlertFR'
     cp = ConfigParser()
@@ -205,6 +202,5 @@ if __name__ == "__main__":
     logger.addHandler(slog)
     logger.info(f"{n} started")
 
-
     for artiste in ARTISTES:
-        gen_artist_latest_releases(artiste['id'], artiste['twitter'])
+        check_for_artiste(artiste['id'], artiste['twitter'])
