@@ -92,7 +92,7 @@ def send_tweet(text):
     json_response = response.json()
     str_ = json.dumps(json_response, indent=4, sort_keys=True)
     data = json.loads(str_)
-    logger.info(" -> https://twitter.com/SpotifyAlertFR/status/{}" \
+    logger.info("New Tweet -> https://twitter.com/SpotifyAlertFR/status/{}" \
                                                     .format(data['data']['id']))
 
 def convert_duration(duration_ms):
