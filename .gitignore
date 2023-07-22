@@ -1,0 +1,7 @@
+.DS_Store
+**/.DS_Store
+SpotifyAlertFR.egg-info
+dist
+build
+.cache
+**/__pycache__
