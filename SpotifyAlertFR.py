@@ -87,8 +87,11 @@ def send_tweet(text):
     )
 
     if response.status_code != 201:
-        raise Exception("Request returned an error: {} {}" \
-                                  .format(response.status_code, response.text))
+        msg = "Request returned an error: {} {}" \
+                                  .format(response.status_code, response.text)
+        logger.info(msg)
+        raise Exception(msg)
+        
     json_response = response.json()
     str_ = json.dumps(json_response, indent=4, sort_keys=True)
     data = json.loads(str_)
