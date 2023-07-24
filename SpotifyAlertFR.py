@@ -160,9 +160,9 @@ def check_for_artiste(artist_id, twitter, limit=5):
                 artites_lists = []
 
                 for art in item['artists']:
-                    name_ = art['name']
                     if art['id'] == artist_id:
                         continue
+                    name_ = art['name']
                     for artiste in ARTISTES:
                         if art['id'] == artiste['spotify_id']:
                             name_ = artiste['twitter_tag']
