@@ -91,7 +91,7 @@ def send_tweet(text):
                                   .format(response.status_code, response.text)
         logger.info(msg)
         raise Exception(msg)
-        
+
     json_response = response.json()
     str_ = json.dumps(json_response, indent=4, sort_keys=True)
     data = json.loads(str_)
@@ -130,20 +130,30 @@ def check_for_artiste(artist_id, twitter, limit=5):
                              reverse=True)
     for release in latest_releases:
         if not album_exist(release['id']):
+
+            r = sp.album_tracks(release['id'])
+
+            if release['album_type'] == 'single':
+                if len(r['items']) == 1:
+                    album_type = release['album_type']
+                else:
+                    album_type = 'EP'
+            else:
+                album_type = release['album_type']
+
             if twitter == 'not found':
                 TWEET = "Nouveau {} de {}\n\n{} - {}\n\nTrack:\n" \
-                                                .format(release['album_type'],
+                                                .format(album_type,
                                                         artist_name,
                                                         release['name'],
                                                         release['release_date'])
             else:
                 TWEET = "Nouveau {} de {} ({})\n\n{} - {}\n\nTrack:\n" \
-                                                .format(release['album_type'],
+                                                .format(album_type,
                                                         artist_name,
                                                         twitter,
                                                         release['name'],
                                                         release['release_date'])
-            r = sp.album_tracks(release['id'])
 
             failed_line = False
             for item in r['items']:
