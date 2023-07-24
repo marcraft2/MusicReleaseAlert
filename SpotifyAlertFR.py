@@ -4,6 +4,7 @@ Spotify Twitter Bot - SpotifyAlertFR
 
 from requests_oauthlib import OAuth1Session
 from logging.handlers import SysLogHandler
+from datetime import datetime, timedelta
 from spotipy.oauth2 import SpotifyOAuth
 from configparser import ConfigParser
 from twitter_text import parse_tweet
@@ -114,6 +115,16 @@ def convert_duration(duration_ms):
 
     return formatted_duration
 
+def is_date_less_than_2_days_ago(date_string):
+    date_format = "%Y-%m-%d"
+    given_date = datetime.strptime(date_string, date_format)
+    current_date = datetime.now()
+    difference = current_date - given_date
+    if difference < timedelta(days=3):
+        return True
+    else:
+        return False
+
 def check_for_artiste(artist_id, twitter, limit=20):
     sp = spotipy.Spotify(
                 auth_manager=SpotifyOAuth(client_id=config["spotify_client_id"],
@@ -186,7 +197,15 @@ def check_for_artiste(artist_id, twitter, limit=20):
                 TWEET = TWEET + '[...]\n'
 
             TWEET = TWEET + release['external_urls']['spotify']
-            send_tweet(TWEET)
+
+            if is_date_less_than_2_days_ago(release['release_date']):
+                send_tweet(TWEET)
+            else:
+                logger.info('Ancien Album {} - {} {} {}'.format(artist_name,
+                                                                release['name'],
+                                                                release['id'],
+                                                       release['release_date']))
+
             add_album(artist_id, artist_name, release['id'],
                                      release['name'], release['release_date'],
                                      release['album_type'])
