@@ -114,7 +114,7 @@ def convert_duration(duration_ms):
 
     return formatted_duration
 
-def check_for_artiste(artist_id, twitter, limit=5):
+def check_for_artiste(artist_id, twitter, limit=20):
     sp = spotipy.Spotify(
                 auth_manager=SpotifyOAuth(client_id=config["spotify_client_id"],
                                   client_secret=config["spotify_client_secret"],
