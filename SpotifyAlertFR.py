@@ -144,6 +144,12 @@ def check_for_artiste(artist_id, twitter, limit=20):
 
             r = sp.album_tracks(release['id'])
 
+            for i in r['items']:
+                if i['artists'][0] == artist_id:
+                    break
+            else:
+                continue
+
             if release['album_type'] == 'single':
                 if len(r['items']) == 1:
                     album_type = release['album_type']
