@@ -304,7 +304,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': 'not found',    'spotify_id': '24zj84GShUIcBQYq6VpOYW'}, # Duke Deuce
     {'twitter_tag': 'not found',    'spotify_id': '46HzS7yz0c9udVwtbHk1sx'}, # Cochise
     {'twitter_tag': 'not found',    'spotify_id': '37S0GFsBW73uqxGXNFeADJ'}, # Ghost Killer Track
-    {'twitter_tag': 'not found',    'spotify_id': '6pG1eQ7Y8WNHsPOjgW2HyK'}, # Asap Rocky
+    {'twitter_tag': 'not found',    'spotify_id': '13ubrt8QOOCPljQ2FL1Kca'}, # Asap Rocky
     {'twitter_tag': 'not found',    'spotify_id': '1nL98XHH55na3zeMnrYMXh'}, # Manu Crooks
     {'twitter_tag': 'not found',    'spotify_id': '2LakckgvXEtJlKOYP6BO11'}, # Lancey Foux
     {'twitter_tag': 'not found',    'spotify_id': '757aE44tKEUQEqRuT6GnEB'}, # Roddy Ricch
