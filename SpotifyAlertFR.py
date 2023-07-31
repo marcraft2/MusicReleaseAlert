@@ -101,18 +101,15 @@ def send_tweet(text):
 
 def convert_duration(duration_ms):
     duration_sec = duration_ms // 1000
-
     hours = duration_sec // 3600
     minutes = (duration_sec % 3600) // 60
     seconds = duration_sec % 60
-
     if hours > 0:
         formatted_duration = f"{hours}h{minutes:02}m{seconds:02}s"
     elif minutes > 0:
         formatted_duration = f"{minutes}m{seconds:02}s"
     else:
         formatted_duration = f"{seconds}s"
-
     return formatted_duration
 
 def is_date_less_than_2_days_ago(date_string):
@@ -145,9 +142,11 @@ def check_for_artiste(artist_id, twitter, limit=20):
             r = sp.album_tracks(release['id'])
 
             for i in r['items']:
-                if i['artists'][0] == artist_id:
+                if i['artists'][0]['id'] !== artist_id:
                     break
             else:
+                logger.info("L'artiste n'est pas celui rechercher {} {}"  \
+                                     .format(i['artists'][0]['id'], artist_id))
                 continue
 
             if release['album_type'] == 'single':
@@ -181,7 +180,8 @@ def check_for_artiste(artist_id, twitter, limit=20):
                         continue
                     name_ = art['name']
                     for artiste in ARTISTES:
-                        if art['id'] == artiste['spotify_id']:
+                        if art['id'] == artiste['spotify_id'] \
+                        and artiste['twitter_tag'] !== 'not found':
                             name_ = artiste['twitter_tag']
                     artites_lists.append(name_)
 

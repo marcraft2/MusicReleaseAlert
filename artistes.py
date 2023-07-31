@@ -241,5 +241,13 @@ ARTISTES = [
     {'twitter_tag': '@Lacrim_Officiel', 'spotify_id': '7DUTsWY3RBd64vh8UtgtYA'}, # Lacrim
     {'twitter_tag': '@Doumslentourage', 'spotify_id': '4yLgYK2B5nZjZMBiaLyLyK'}, # Doums
     {'twitter_tag': '@GuizLaBanquise',  'spotify_id': '6sYR8JTRUUUzSD9IydLhfG'}, # Guizmo
+    {'twitter_tag': 'not found',        'spotify_id': '2uPnSufbvOp5qewqtwu0VL'}, # AVE
+    {'twitter_tag': 'not found',        'spotify_id': '16GSYNHoKywQdqoZoeHDLw'}, # Hypo'z
+    {'twitter_tag': 'not found',        'spotify_id': '7qiBanyVS8KeQKnlaensuX'}, # Kaki Santana 667
+    {'twitter_tag': 'not found',        'spotify_id': '0fSf4wZta5pfpOUUebhaQr'}, # Horus
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'} # 404Billy
+
+
+
+
 ] # Set twitter to 'not found' if not have twitter account
