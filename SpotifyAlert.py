@@ -111,7 +111,10 @@ def convert_duration(duration_ms):
     return formatted_duration
 
 def is_date_less_than_2_days_ago(date_string):
-    date_format = "%Y-%m-%d"
+    if len(date_string) == 4:
+        date_format = "%Y"
+    else:
+        date_format = "%Y-%m-%d"
     given_date = datetime.strptime(date_string, date_format)
     current_date = datetime.now()
     difference = current_date - given_date
