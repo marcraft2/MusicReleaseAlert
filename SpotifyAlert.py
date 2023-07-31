@@ -1,5 +1,5 @@
 """
-Spotify Twitter Bot - SpotifyAlertFR
+Spotify Twitter Bot - SpotifyAlert
 """
 
 from requests_oauthlib import OAuth1Session
@@ -19,18 +19,20 @@ from artistes import ARTISTES
 
 # Configuration
 DEFAULT_CONFIG = {
-    "SpotifyAlertFR": {
+    "SpotifyAlert": {
         "twitter_consumer_key": "YOUR TWITTER consumer_key",
         "twitter_consumer_secret": "YOUR TWITTER consumer_secret",
-        "twitter_access_token": "YOUR TWITTER access_token",
-        "twitter_access_token_secret": "YOUR TWITTER access_token_secret",
+        "fr_twitter_access_token": "YOUR TWITTER access_token",
+        "fr_twitter_access_token_secret": "YOUR TWITTER access_token_secret",
+        "us_twitter_access_token": "YOUR TWITTER access_token",
+        "us_twitter_access_token_secret": "YOUR TWITTER access_token_secret",
         "spotify_client_id": "YOUR SPOTIFY client_id",
         "spotify_client_secret": "YOUR SPOTIFY client_secret",
         "spotify_redirect_uri": "YOUR SPOTIFY redirect_uri",
         "log_level": "info",
         "log_address": "/dev/log",
         "log_facility": "daemon",
-        "database_file": '/var/SpotifyAlertFR/spotify.db'
+        "database_file": '/var/SpotifyAlert/spotify.db'
     }
 }
 
@@ -69,19 +71,15 @@ def album_exist(album_id):
         conn.close()
         return False
 
-
-def send_tweet(text):
+def send_tweet(text, lang):
     payload = {"text": text}
     oauth = OAuth1Session(
         client_key=config["twitter_consumer_key"],
         client_secret=config["twitter_consumer_secret"],
-        resource_owner_key=config["twitter_access_token"],
-        resource_owner_secret=config["twitter_access_token_secret"],
+        resource_owner_key=config[lang+"_twitter_access_token"],
+        resource_owner_secret=config[lang+"_twitter_access_token_secret"],
     )
-    # Acces token generer sur le compte de AlertSpotify
-    # https://github.com/twitterdev/Twitter-API-v2-sample-code/blob/main/Manage-Tweets/create_tweet.py
-    # Valider le code avec le compte en question
-
+    
     response = oauth.post(
         "https://api.twitter.com/2/tweets",
         json=payload,
@@ -96,7 +94,7 @@ def send_tweet(text):
     json_response = response.json()
     str_ = json.dumps(json_response, indent=4, sort_keys=True)
     data = json.loads(str_)
-    logger.info("New Tweet -> https://twitter.com/SpotifyAlertFR/status/{}" \
+    logger.info("New Tweet -> https://twitter.com/xxxxxxxxx/status/{}" \
                                                     .format(data['data']['id']))
 
 def convert_duration(duration_ms):
@@ -122,7 +120,7 @@ def is_date_less_than_2_days_ago(date_string):
     else:
         return False
 
-def check_for_artiste(artist_id, twitter, limit=20):
+def check_for_artiste(artist_id, twitter, lang):
     sp = spotipy.Spotify(
                 auth_manager=SpotifyOAuth(client_id=config["spotify_client_id"],
                                   client_secret=config["spotify_client_secret"],
@@ -132,7 +130,7 @@ def check_for_artiste(artist_id, twitter, limit=20):
     r = sp.artist(artist_id)
     artist_name = r['name']
 
-    albums = sp.artist_albums(artist_id, limit=limit)
+    albums = sp.artist_albums(artist_id, limit=20)
     latest_releases = sorted(albums['items'],
                              key=lambda k: k['release_date'],
                              reverse=True)
@@ -207,7 +205,7 @@ def check_for_artiste(artist_id, twitter, limit=20):
             TWEET = TWEET + release['external_urls']['spotify']
 
             if is_date_less_than_2_days_ago(release['release_date']):
-                send_tweet(TWEET)
+                send_tweet(TWEET, lang)
             else:
                 logger.info('Ancien Album {} - {} {} {}'.format(artist_name,
                                                                 release['name'],
@@ -226,7 +224,7 @@ def check_for_artiste(artist_id, twitter, limit=20):
 
 if __name__ == "__main__":
     # Load configuration
-    n = 'SpotifyAlertFR'
+    n = 'SpotifyAlert'
     cp = ConfigParser()
     cp.read_dict(DEFAULT_CONFIG)
     cp.read(f'/etc/{n}/{n}.cfg')
@@ -238,11 +236,12 @@ if __name__ == "__main__":
     logger.setLevel(log_level)
     slog = SysLogHandler(config["log_address"], config["log_facility"])
     slog.setLevel(log_level)
-    slog.setFormatter(logging.Formatter("SpotifyAlertFR: {message}", style="{"))
+    slog.setFormatter(logging.Formatter("SpotifyAlert: {message}", style="{"))
     logger.addHandler(slog)
     logger.info(f"{n} started")
 
-    for artiste in ARTISTES:
-        check_for_artiste(artiste['spotify_id'], artiste['twitter_tag'])
+    for lang in ['fr', 'us']
+        for artiste in ARTISTES[lang]:
+            check_for_artiste(artiste['spotify_id'], artiste['twitter_tag'], lang)
 
     logger.info(f"{n} ended")

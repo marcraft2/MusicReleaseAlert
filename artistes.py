@@ -2,7 +2,7 @@
 Listes d'artistes
 """
 
-ARTISTES = [
+ARTISTES = {'fr': [
     {'twitter_tag': '@OBOYofficiel',    'spotify_id': '66Ok6bgC570sHkw08N20pZ'}, # Oboy
     {'twitter_tag': '@we_renoi',        'spotify_id': '3YBJLs7RqR0aPGBgU27nDh'}, # WeRenoi
     {'twitter_tag': '@HamzaSauceGod',   'spotify_id': '5gs4Sm2WQUkcGeikMcVHbh'}, # Hamza
@@ -255,4 +255,150 @@ ARTISTES = [
     {'twitter_tag': 'not found',        'spotify_id': '00Y1TGltKzvJj803cKj78H'}, # MKSN
     {'twitter_tag': 'not found',        'spotify_id': '2u3IM7qNMnBP18Ho8yrA4e'}, # Nelson Lean
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'} # 404Billy
-] # Set twitter to 'not found' if not have twitter account
+], 'us': [
+    {'twitter_tag': '@metroboomin',   'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'},# Metro Boomin
+    {'twitter_tag': '@DonToliver',    'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
+    {'twitter_tag': 'not found',    'spotify_id': '4O15NlyKLIASxsJ0PrXPfz'}, # Lil Uzi Vert
+    {'twitter_tag': 'not found',    'spotify_id': '2hlmm7s2ICUX0LVIhVFlZQ'}, # Gunna
+    {'twitter_tag': 'not found',    'spotify_id': '1HPW4jeRjXBFRoUnSvBzoD'}, # Destroy Lonely
+    {'twitter_tag': 'not found',    'spotify_id': '3a1tBryiczPAZpgoZN9Rzg'}, # Asake
+    {'twitter_tag': 'not found',    'spotify_id': '4ovtyvs7j1jSmwhkBGHqSr'}, # Olamide
+    {'twitter_tag': 'not found',    'spotify_id': '4j2hypl84JFGRz00du5JT8'}, # Kel-P
+    {'twitter_tag': 'not found',    'spotify_id': '3hcs9uc56yIGFCSy9leWe7'}, # Lil Durk
+    {'twitter_tag': 'not found',    'spotify_id': '3qiHUAX7zY4Qnjx8TNUzVx'}, # Yeat
+    {'twitter_tag': 'not found',    'spotify_id': '50co4Is1HCEo8bhOyUWKpn'}, # Young Thug
+    {'twitter_tag': 'not found',    'spotify_id': '3tJoFztHeIJkJWMrx0td2f'}, # Moneybagg Yo
+    {'twitter_tag': 'not found',    'spotify_id': '638CPU1xRHUo6AmfZe3F2c'}, # Eva Shaw
+    {'twitter_tag': 'not found',    'spotify_id': '1O8X4zxUh4AdAPFttOTlLr'}, # Thouxandanfauni
+    {'twitter_tag': 'not found',    'spotify_id': '5ltYVQ8xZcX9CnLT4Jl0sa'}, # DB Bantino
+    {'twitter_tag': 'not found',    'spotify_id': '2cMVIRpseAO7fJAxNfg6rD'}, # CHASE B
+    {'twitter_tag': 'not found',    'spotify_id': '0Y5tJX1MQlPlqiwlOH1tJY'}, # Travis Scott
+    {'twitter_tag': 'not found',    'spotify_id': '0VRj0yCOv2FXJNP47XQnx5'}, # Quavo
+    {'twitter_tag': 'not found',    'spotify_id': '7c0XG5cIJTrrAgEC3ULPiq'}, # Ty Dolla Sign
+    {'twitter_tag': 'not found',    'spotify_id': '5f7VJjfbwm532GiveGC0ZK'}, # Lil Baby
+    {'twitter_tag': 'not found',    'spotify_id': '46pWGuE3dSwY3bMMXGBvVS'}, # Rema
+    {'twitter_tag': 'not found',    'spotify_id': '7wlFDEWiM5OoIAt8RSli8b'}, # YoungBoy Never Broke Again
+    {'twitter_tag': 'not found',    'spotify_id': '6nhrSIBO7uf6WWFkmkrQkf'}, # Guap Tarantino
+    {'twitter_tag': 'not found',    'spotify_id': '7pFeBzX627ff0VnN6bxPR4'}, # Desiigner
+    {'twitter_tag': 'not found',    'spotify_id': '31W5EY0aAly4Qieq6OFu6I'}, # A Boogie Wit da Hoodie
+    {'twitter_tag': 'not found',    'spotify_id': '4KopSPzxYX2YfExvXefbjp'}, # cityboymoe
+    {'twitter_tag': 'not found',    'spotify_id': '558RX1PVNFmCYmOhveATIb'}, # Exotic
+    {'twitter_tag': 'not found',    'spotify_id': '21UPYSRWFKwtqvSAnFnSvS'}, # Amaarae
+    {'twitter_tag': 'not found',    'spotify_id': '3LZZPxNDGDFVSIPqf4JuEf'}, # Ice Spice
+    {'twitter_tag': 'not found',    'spotify_id': '6Xgp2XMz1fhVYe7i6yNAax'}, # Trippie Redd
+    {'twitter_tag': 'not found',    'spotify_id': '46SHBwWsqBkxI7EeeBEQG7'}, # Kodak Black
+    {'twitter_tag': 'not found',    'spotify_id': '6UCQYrcJ6wab6gnQ89OJFh'}, # Headie One
+    {'twitter_tag': 'not found',    'spotify_id': '1K15GRZZATsCJyGJ4bYiEz'}, # Luh Tyler
+    {'twitter_tag': 'not found',    'spotify_id': '3FoFW2AoUGRHBacC6i4x4p'}, # Russ Millions
+    {'twitter_tag': 'not found',    'spotify_id': '1RyvyyTE3xzB2ZywiAwp0i'}, # Future
+    {'twitter_tag': 'not found',    'spotify_id': '1nrJKGxkiSY6FjJRXcc9CB'}, # Bawo
+    {'twitter_tag': 'not found',    'spotify_id': '1zEx84twaro5PvvD3yTCom'}, # Anwzeezy
+    {'twitter_tag': 'not found',    'spotify_id': '24wZhe5S2ElzaYdULrJPhV'}, # Aqua Raps
+    {'twitter_tag': 'not found',    'spotify_id': '6CHTgEfOTvm5flR5Cpzw0I'}, # Swavy
+    {'twitter_tag': 'not found',    'spotify_id': '2MErAFVwib6BaoHZa3GvWb'}, # BLXSS
+    {'twitter_tag': 'not found',    'spotify_id': '5SjkjKZ05dPl7gtZbBRQV4'}, # Muz!
+    {'twitter_tag': 'not found',    'spotify_id': '1ZilzPhvZhYUCSGczNRlyt'}, # Eli Sostre
+    {'twitter_tag': 'not found',    'spotify_id': '5DfaMudUwkoz6TAPYifqkJ'}, # Naira Marley
+    {'twitter_tag': 'not found',    'spotify_id': '1KV1kUwVWFHdF8J4GGiMkg'}, # Rolling Loud
+    {'twitter_tag': 'not found',    'spotify_id': '7iZtZyCzp3LItcw1wtPI3D'}, # Rae Sremmurd
+    {'twitter_tag': 'not found',    'spotify_id': '24zj84GShUIcBQYq6VpOYW'}, # Duke Deuce
+    {'twitter_tag': 'not found',    'spotify_id': '46HzS7yz0c9udVwtbHk1sx'}, # Cochise
+    {'twitter_tag': 'not found',    'spotify_id': '37S0GFsBW73uqxGXNFeADJ'}, # Ghost Killer Track
+    {'twitter_tag': 'not found',    'spotify_id': '6pG1eQ7Y8WNHsPOjgW2HyK'}, # Asap Rocky
+    {'twitter_tag': 'not found',    'spotify_id': '1nL98XHH55na3zeMnrYMXh'}, # Manu Crooks
+    {'twitter_tag': 'not found',    'spotify_id': '2LakckgvXEtJlKOYP6BO11'}, # Lancey Foux
+    {'twitter_tag': 'not found',    'spotify_id': '757aE44tKEUQEqRuT6GnEB'}, # Roddy Ricch
+    {'twitter_tag': 'not found',    'spotify_id': '2RdwBSPQiwcmiDo9kixcl8'}, # Pharrell Williams
+    {'twitter_tag': 'not found',    'spotify_id': '3TVXtAsR1Inumwj472S9r4'}, # Drake
+    {'twitter_tag': 'not found',    'spotify_id': '1URnnhqYAYcrqrcwql10ft'}, # 21 Savage
+    {'twitter_tag': 'not found',    'spotify_id': '3Ov1o1t4WuiZfVcU7rXG90'}, # Adanna Duru
+    {'twitter_tag': 'not found',    'spotify_id': '3tVQdUvClmAT7URs9V3rsp'}, # Wizkid
+    {'twitter_tag': 'not found',    'spotify_id': '3ZpEKRjHaHANcpk10u6Ntq'}, # Ayra Starr
+    {'twitter_tag': 'not found',    'spotify_id': '35R1B97CfrqKFFI3QBkTDx'}, # RealestK
+    {'twitter_tag': 'not found',    'spotify_id': '5VFbrnGdINL3hcSOluMsCj'}, # Kasien
+    {'twitter_tag': 'not found',    'spotify_id': '5SXuuuRpukkTvsLuUknva1'}, # Baby Keem
+    {'twitter_tag': 'not found',    'spotify_id': '1ybINI1qPiFbwDXamRtwxD'}, # Smino
+    {'twitter_tag': 'not found',    'spotify_id': '5Vuvs6Py2JRU7WiFDVsI7J'}, # Lucky Daye
+    {'twitter_tag': 'not found',    'spotify_id': '2TKC2gVUNBUAlFqfLUoaj0'}, # Phoelix
+    {'twitter_tag': 'not found',    'spotify_id': '2AMeiDbfU2vonrTkpXDKUu'}, # Kay Flock
+    {'twitter_tag': 'not found',    'spotify_id': '13y7CgLHjMVRMDqxdx0Xdo'}, # Gucci Mane
+    {'twitter_tag': 'not found',    'spotify_id': '6icQOAFXDZKsumw3YXyusw'}, # Lil Yatchy
+    {'twitter_tag': 'not found',    'spotify_id': '0gg11prPP6OqtUvBcKnPpq'}, # Rylo Rodriguez
+    {'twitter_tag': 'not found',    'spotify_id': '0Njy6yR9LykNKYg9yE23QN'}, # Narfo Wick
+    {'twitter_tag': 'not found',    'spotify_id': '3EW0kQ1skZiK1NHg3Spt9J'}, # TakeOff
+    {'twitter_tag': 'not found',    'spotify_id': '7tFehEdzjjoeiwUExR89qs'}, # Kankan
+    {'twitter_tag': 'not found',    'spotify_id': '5tQMB0cuNXdCtzovGt55uD'}, # Lucki
+    {'twitter_tag': 'not found',    'spotify_id': '0WK3H9OErSn5zKOkOV5egm'}, # DDG
+    {'twitter_tag': 'not found',    'spotify_id': '4TAoP0f9OuWZUesao43xUW'}, # Mr Eazi
+    {'twitter_tag': 'not found',    'spotify_id': '7ACLUXo71FsLZaKMOPDnEJ'}, # Joey B
+    {'twitter_tag': 'not found',    'spotify_id': '33CYyUywVRqTra6IdaQ35H'}, # DJ Tarico
+    {'twitter_tag': 'not found',    'spotify_id': '4cj5TCwrnTVbFhtLaSbSQf'}, # Dopey
+    {'twitter_tag': 'not found',    'spotify_id': '0fA0VVWsXO9YnASrzqfmYu'}, # Kid Cudi
+    {'twitter_tag': 'not found',    'spotify_id': '3sKtIn5Iwb9LepGmda94bm'}, # OS2KL
+    {'twitter_tag': 'not found',    'spotify_id': '5lHRUCqkQZCIWeX7xG4sYT'}, # Rochie Homie Quan
+    {'twitter_tag': 'not found',    'spotify_id': '2dPKMLvEI6eIbq2ePVOEMQ'}, # ogxmill
+    {'twitter_tag': 'not found',    'spotify_id': '3H51luvwbSEVpkSdAnH5lX'}, # Johnny Master
+    {'twitter_tag': 'not found',    'spotify_id': '3Rx4PJ7SP6unkOk5elPUK7'}, # Money Man
+    {'twitter_tag': 'not found',    'spotify_id': '0RESbWvOMyua0yuyVrztJ5'}, # Key Glock
+    {'twitter_tag': 'not found',    'spotify_id': '3KNIG74xSTc3dj0TRy7pGX'}, # Young Bleu
+    {'twitter_tag': 'not found',    'spotify_id': '3zZ88AwlTwfCJkowsFCvLA'}, # Babyface Ray
+    {'twitter_tag': 'not found',    'spotify_id': '7rkW85dBwwrJtlHRDkJDAC'}, # NAV
+    {'twitter_tag': 'not found',    'spotify_id': '0gCGZZ1Ibo5QsOnll977PD'}, # Killy
+    {'twitter_tag': 'not found',    'spotify_id': '5dtbsNKCK6Q9yZzdhZpaqW'}, # Sean Léon
+    {'twitter_tag': 'not found',    'spotify_id': '6AMd49uBDJfhf30Ak2QR5s'}, # Coi Leray
+    {'twitter_tag': 'not found',    'spotify_id': '2iB8eFB6flwQculkUrRssi'}, # August 08
+    {'twitter_tag': 'not found',    'spotify_id': '5IcR3N7QB1j6KBL8eImZ8m'}, # SchoolboyQ
+    {'twitter_tag': 'not found',    'spotify_id': '3yvCFkK57FXH7JIwZQ5CmU'}, # Baka Not Nice
+    {'twitter_tag': 'not found',    'spotify_id': '2oz0IgsR0xKABrapfXcEwy'}, # Sonny Rave
+    {'twitter_tag': 'not found',    'spotify_id': '3PgCoKtxkxF046P2FM7SFE'}, # Tyr
+    {'twitter_tag': 'not found',    'spotify_id': '0JjPiLQNgAFaEkwoy56B1C'}, # L7NNON
+    {'twitter_tag': 'not found',    'spotify_id': '7b79bQFziJFedJb75k6hFt'}, # Tion Wayne
+    {'twitter_tag': 'not found',    'spotify_id': '0QHgL1lAIqAw0HtD7YldmP'}, # DJ Khaled
+    {'twitter_tag': 'not found',    'spotify_id': '16SkmlqKt2Xf6mqurZgpdt'}, # ThottWat
+    {'twitter_tag': 'not found',    'spotify_id': '6MPCFvOQv5cIGfw3jODMF0'}, # Internet Money
+    {'twitter_tag': 'not found',    'spotify_id': '3zaDigUwjHvjOkSn0NDf9x'}, # Bnxn
+    {'twitter_tag': 'not found',    'spotify_id': '2NjfafEappzvGGGDdMRJMP'}, # Azizi Gilbson
+    {'twitter_tag': 'not found',    'spotify_id': '6jGMq4yGs7aQzuGsMgVgZR'}, # Lil Tjay
+    {'twitter_tag': 'not found',    'spotify_id': '2dPKMLvEI6eIbq2ePVOEMQ'}, # D-Block Europe
+    {'twitter_tag': 'not found',    'spotify_id': '396eHybVCEUr0PcED4yFga'}, # Young Adz
+    {'twitter_tag': 'not found',    'spotify_id': '5olrQpDroHT7sjmYWMLivy'}, # Pressa
+    {'twitter_tag': 'not found',    'spotify_id': '2PJEagPIxaBugeMjIyKVXF'}, # Aitch
+    {'twitter_tag': 'not found',    'spotify_id': '2HUwZ0kumzCSlhFcjFZfpp'}, # Flipp Dinero
+    {'twitter_tag': 'not found',    'spotify_id': '1HPW4jeRjXBFRoUnSvBzoD'}, # Destroy Lonely
+    {'twitter_tag': 'not found',    'spotify_id': '5yPzzu25VzEk8qrGTLIrE1'}, # Young Nudy
+    {'twitter_tag': 'not found',    'spotify_id': '181bsRPaVXVlUKXrxwZfHK'}, # Megan Thee Stallion
+    {'twitter_tag': 'not found',    'spotify_id': '5nSAh3wlH7VaqpnkiMjzDs'}, # WSTRN
+    {'twitter_tag': 'not found',    'spotify_id': '51op6E2hjkeutwFhgw32mL'}, # BlackRoad Gee
+    {'twitter_tag': 'not found',    'spotify_id': '6U3ybJ9UHNKEdsH7ktGBZ7'}, # JID
+    {'twitter_tag': 'not found',    'spotify_id': '4mwdnO2jZrMmMVrjcHsZBv'}, # Kenny Mason
+    {'twitter_tag': 'not found',    'spotify_id': '4Ga1P7PMIsmqEZqhYZQgDo'}, # Lil Tecca
+    {'twitter_tag': 'not found',    'spotify_id': '1Z25ZlGHqqlr3o1UGQOfNn'}, # JNR CHOI
+    {'twitter_tag': 'not found',    'spotify_id': '14CHVeJGrR5xgUGQFV5BVM'}, # Fivio Foreign
+    {'twitter_tag': 'not found',    'spotify_id': '1iNqsUDUraNWrj00bqssQG'}, # DreamVille
+    {'twitter_tag': 'not found',    'spotify_id': '6l3HvQ5sa6mXTsMTB19rO5'}, # J.Cole
+    {'twitter_tag': 'not found',    'spotify_id': '2RDOrhPqAM4jzTRCEb19qX'}, # Sheck Wes
+    {'twitter_tag': 'not found',    'spotify_id': '0r8PPl6CXkR4SWhbyoSTLU'}, # Lil Macks
+    {'twitter_tag': 'not found',    'spotify_id': '30BKwZVpqGdMPO0Vtxj6i0'}, # Jayd33n
+    {'twitter_tag': 'not found',    'spotify_id': '3Elp2e4JVkT08bnUbE1AZw'}, # ZaeHD & CEO
+    {'twitter_tag': 'not found',    'spotify_id': '23DYJsw4uSCguIqiTIDtcN'}, # SouthSide
+    {'twitter_tag': 'not found',    'spotify_id': '5FcbkihIRUnHwhYOaQ5cPB'}, # Fallen Clayt
+    {'twitter_tag': 'not found',    'spotify_id': '7gmVTgaiN0gpDJKvTHPTRL'}, # KayCyy
+    {'twitter_tag': 'not found',    'spotify_id': '2SJhf6rTOU53g8yBdAjPby'}, # SoFaygo
+    {'twitter_tag': 'not found',    'spotify_id': '3TTq94wgOIj0skk2wT8bnb'}, # A2 Anti
+    {'twitter_tag': 'not found',    'spotify_id': '5NMLiOrPSSOKZbeJKChGOP'}, # TazForte
+    {'twitter_tag': 'not found',    'spotify_id': '1UEoKfztt0ccS9V2UUPUBF'}, # ARTWXRK
+    {'twitter_tag': 'not found',    'spotify_id': '3gBZUcNeVumkeeJ19CY2sX'}, # Ken Carson
+    {'twitter_tag': 'not found',    'spotify_id': '6m1LYS5NQonxjOcQFPQOb5'}, # Frenna
+    {'twitter_tag': 'not found',    'spotify_id': '4ke9HXbejpYVMhbOjSa4le'}, # Lil Gotit
+    {'twitter_tag': 'not found',    'spotify_id': '2IK173RXLiCSQ8fhDlAb3s'}, # Adekunle Gold
+    {'twitter_tag': 'not found',    'spotify_id': '491U1PrV1EoQuhM0aUCn9r'}, # M Huncho
+    {'twitter_tag': 'not found',    'spotify_id': '246dkjvS1zLTtiykXe5h60'}, # Post Malone
+    {'twitter_tag': 'not found',    'spotify_id': '6Jb1lWkhG604r5Ly1HCfvh'}, # Jelly
+    {'twitter_tag': 'not found',    'spotify_id': '3x3jSlhyv5CiCZDZlaTq0M'}, # Pierre Bourne
+    {'twitter_tag': 'not found',    'spotify_id': '5gCRApTajqwbnHHPbr2Fpi'}, # Juicy J
+    {'twitter_tag': 'not found',    'spotify_id': '5md3qSXO7cZirgp5eY5VGP'}, # Joell
+    {'twitter_tag': 'not found',    'spotify_id': '15UsOTVnJzReFVN1VCnxy4'}, # XXX le KING #RIP
+    {'twitter_tag': 'not found',    'spotify_id': '1r29dFdSenwksTQdkH7r6I'}, # lil Shordie Scott
+    {'twitter_tag': 'not found',    'spotify_id': '5bgfj5zUoWpyeVatGDjn6H'}, # K CAMP
+    {'twitter_tag': 'not found',    'spotify_id': '2YZyLoL8N0Wb9xBt1NhZWg'} # Kendrick Lamar
+]} # Set twitter to 'not found' if not have twitter account

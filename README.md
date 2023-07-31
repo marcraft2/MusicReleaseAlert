@@ -3,13 +3,14 @@
 ## Twitter
 
 https://twitter.com/SpotifyAlertFR
+https://twitter.com/SpotifyAlertUS
 
 ## Use Bot
 
 - Create Database:
 
 ```
-sqlite /var/SpotifyAlertFR/spotify.db
+sqlite /var/SpotifyAlert/spotify.db
 ```
 
 ```
@@ -28,19 +29,24 @@ CREATE TABLE IF NOT EXISTS last_release (
 - Set Configuration
 
 ```
-nano /etc/SpotifyAlertFR/SpotifyAlertFR.cfg
+mkdir /etc/SpotifyAlert
+nano /etc/SpotifyAlert/SpotifyAlert.cfg
 ```
 
 ```
-[SpotifyAlertFR]
-twitter_consumer_key: xxx
-twitter_consumer_secret: xx
-twitter_access_token: xxx-xxx
-twitter_access_token_secret: xxxx
+[SpotifyAlert]
+fr_twitter_consumer_key: xxx
+fr_twitter_consumer_secret: xx
+fr_twitter_access_token: xxx-xxx
+fr_twitter_access_token_secret: xxxx
+us_twitter_consumer_key: xxx
+us_twitter_consumer_secret: xx
+us_twitter_access_token: xxx-xxx
+us_twitter_access_token_secret: xxxx
 spotify_client_id: xxxx
 spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
-database_file: /var/SpotifyAlertFR/spotify.db
+database_file: /var/SpotifyAlert/spotify.db
 ```
 
 - Set cron
@@ -50,17 +56,17 @@ crontab -e
 ```
 
 ```
-2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlertFR && /usr/bin/python3 /root/scripts/SpotifyAlertFR/SpotifyAlertFR.py >> /var/log/SpotifyAlertFR.log 2>&1
+2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlert && /usr/bin/python3 /root/scripts/SpotifyAlert/SpotifyAlert.py >> /var/log/SpotifyAlert.log 2>&1
 ```
 
 - Check live log
 
 ```
-tail -f /var/log/daemon.log | grep SpotifyAlertFR
+tail -f /var/log/daemon.log | grep SpotifyAlert
 ```
 
 - Check old log
 
 ```
-zgrep SpotifyAlertFR /var/log/daemon*
+zgrep SpotifyAlert /var/log/daemon*
 ```

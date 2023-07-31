@@ -1,6 +1,6 @@
 .DS_Store
 **/.DS_Store
-SpotifyAlertFR.egg-info
+SpotifyAlert.egg-info
 dist
 build
 .cache
