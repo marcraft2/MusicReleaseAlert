@@ -79,7 +79,7 @@ def send_tweet(text, lang):
         resource_owner_key=config[lang+"_twitter_access_token"],
         resource_owner_secret=config[lang+"_twitter_access_token_secret"],
     )
-    
+
     response = oauth.post(
         "https://api.twitter.com/2/tweets",
         json=payload,
@@ -240,7 +240,7 @@ if __name__ == "__main__":
     logger.addHandler(slog)
     logger.info(f"{n} started")
 
-    for lang in ['fr', 'us']
+    for lang in ['fr', 'us']:
         for artiste in ARTISTES[lang]:
             check_for_artiste(artiste['spotify_id'], artiste['twitter_tag'], lang)
 
