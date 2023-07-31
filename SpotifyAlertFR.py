@@ -145,8 +145,10 @@ def check_for_artiste(artist_id, twitter, limit=20):
                 if i['artists'][0]['id'] == artist_id:
                     break
             else:
-                logger.info("L'artiste n'est pas celui rechercher {} {}"  \
-                                     .format(i['artists'][0]['id'], artist_id))
+                logger.info("Mauvais Artistes {} {} album_id: {}"  \
+                                                  .format(i['artists'][0]['id'],
+                                                                      artist_id,
+                                                                 release['id']))
                 continue
 
             if release['album_type'] == 'single':
