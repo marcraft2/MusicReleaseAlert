@@ -142,7 +142,7 @@ def check_for_artiste(artist_id, twitter, limit=20):
             r = sp.album_tracks(release['id'])
 
             for i in r['items']:
-                if i['artists'][0]['id'] != artist_id:
+                if i['artists'][0]['id'] == artist_id:
                     break
             else:
                 logger.info("L'artiste n'est pas celui rechercher {} {}"  \
