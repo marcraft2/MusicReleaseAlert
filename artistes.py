@@ -245,9 +245,14 @@ ARTISTES = [
     {'twitter_tag': 'not found',        'spotify_id': '16GSYNHoKywQdqoZoeHDLw'}, # Hypo'z
     {'twitter_tag': 'not found',        'spotify_id': '7qiBanyVS8KeQKnlaensuX'}, # Kaki Santana 667
     {'twitter_tag': 'not found',        'spotify_id': '0fSf4wZta5pfpOUUebhaQr'}, # Horus
+    {'twitter_tag': 'not found',        'spotify_id': '1zqxorYFiXYpbUue519plk'}, # L'apache
+    {'twitter_tag': '@yourgoldennboyy', 'spotify_id': '3Z8JItihfWaxeptAtIQkfw'}, # Yourgoldennboyy
+    {'twitter_tag': 'not found',        'spotify_id': '4XytWAgHBOBnChdGUURAZO'}, # SSOLOGOD
+    {'twitter_tag': 'not found',        'spotify_id': '3L774tiJRvPmAS90pOLB44'}, # Rsko
+    {'twitter_tag': 'not found',        'spotify_id': '12PyTIeOkW1qKEmK81FMDN'}, # Vinss
+    {'twitter_tag': 'not found',        'spotify_id': '6yqhqrdQBNqCVas0pNPxuy'}, # Ludovico
+    {'twitter_tag': 'not found',        'spotify_id': '4CWO7nVttMNhjpLlX9Q96i'}, # Subtik
+    {'twitter_tag': 'not found',        'spotify_id': '00Y1TGltKzvJj803cKj78H'}, # MKSN
+    {'twitter_tag': 'not found',        'spotify_id': '2u3IM7qNMnBP18Ho8yrA4e'}, # Nelson Lean
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'} # 404Billy
-
-
-
-
 ] # Set twitter to 'not found' if not have twitter account

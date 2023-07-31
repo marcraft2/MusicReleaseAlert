@@ -145,7 +145,7 @@ def check_for_artiste(artist_id, twitter, limit=20):
                 if i['artists'][0]['id'] == artist_id:
                     break
             else:
-                logger.info("Mauvais Artistes {} {} album_id: {}"  \
+                logger.debug("Mauvais Artistes {} {} album_id: {}"  \
                                                   .format(i['artists'][0]['id'],
                                                                       artist_id,
                                                                  release['id']))
