@@ -179,7 +179,7 @@ def check_for_artiste(artist_id, twitter, lang):
                     if art['id'] == artist_id:
                         continue
                     name_ = art['name']
-                    for artiste in ARTISTES:
+                    for artiste in ARTISTES['fr'] + ARTISTES['us']:
                         if art['id'] == artiste['spotify_id'] \
                         and artiste['twitter_tag'] != 'not found':
                             name_ = artiste['twitter_tag']
