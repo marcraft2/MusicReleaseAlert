@@ -136,18 +136,12 @@ def check_for_artiste(artist_id, twitter, lang):
                              reverse=True)
     for release in latest_releases:
         if not album_exist(release['id']):
+            if release['album_type'] == 'appears_on':
+                logger.debug("Mauvais Artistes {} album_id: {}"  \
+                                              .format(artist_id, release['id']))
+                continue
 
             r = sp.album_tracks(release['id'])
-
-            for i in r['items']:
-                if i['artists'][0]['id'] == artist_id:
-                    break
-            else:
-                logger.debug("Mauvais Artistes {} {} album_id: {}"  \
-                                                  .format(i['artists'][0]['id'],
-                                                                      artist_id,
-                                                                 release['id']))
-                continue
 
             if release['album_type'] == 'single':
                 if len(r['items']) == 1:
