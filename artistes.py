@@ -326,7 +326,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@RyloRodriguez',   'spotify_id': '0gg11prPP6OqtUvBcKnPpq'}, # Rylo Rodriguez
     {'twitter_tag': '@NardoWick',       'spotify_id': '0Njy6yR9LykNKYg9yE23QN'}, # Narfo Wick
     {'twitter_tag': '@1YoungTakeoff',   'spotify_id': '3EW0kQ1skZiK1NHg3Spt9J'}, # TakeOff
-    {'twitter_tag': '@1KanKan_',        'spotify_id': '7tFehEdzjjoeiwUExR89qs'}, # Kankan
+    {'twitter_tag': '@fuckkkankan',     'spotify_id': '7tFehEdzjjoeiwUExR89qs'}, # Kankan
     {'twitter_tag': '@FLAWLESSLUCKI',   'spotify_id': '5tQMB0cuNXdCtzovGt55uD'}, # Lucki
     {'twitter_tag': '@PontiacMadeDDG',  'spotify_id': '0WK3H9OErSn5zKOkOV5egm'}, # DDG
     {'twitter_tag': '@mreazi',          'spotify_id': '4TAoP0f9OuWZUesao43xUW'}, # Mr Eazi
