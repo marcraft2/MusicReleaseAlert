@@ -257,7 +257,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@baboune_cc',      'spotify_id': '3NDWsXwlBk82FaYU7PlSDf'}, # Baboune
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'}  # 404Billy
 ], 'us': [
-    {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'},# Metro Boomin
+    {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
     {'twitter_tag': '@DonToliver',      'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
     {'twitter_tag': 'not found',        'spotify_id': '4O15NlyKLIASxsJ0PrXPfz'}, # Lil Uzi Vert
     {'twitter_tag': '@1GunnaGunna',     'spotify_id': '2hlmm7s2ICUX0LVIhVFlZQ'}, # Gunna
