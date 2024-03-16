@@ -414,5 +414,14 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@Polo_Capalot',    'spotify_id': '6AgTAQt8XS6jRWi4sX7w49'}, # Polo G
     {'twitter_tag': '@jackharlow',      'spotify_id': '2LIk90788K0zvyj2JJVwkJ'}, # Jack Harlow
     {'twitter_tag': '@DojaCat',         'spotify_id': '5cj0lLjcoR7YOSnhnX0Po5'}, # Doja Cat
+    {'twitter_tag': '@richthekid',      'spotify_id': '1pPmIToKXyGdsCF6LmqLmI'}, # Rich The Kid
+    {'twitter_tag': 'not found',        'spotify_id': '4xPQFgDA5M2xa0ZGo5iIsv'}, # YS
+    {'twitter_tag': '@1TurboTheGreat',  'spotify_id': '002HSjuWsGMinkXTa7JcRp'}, # Turbo
+    {'twitter_tag': '@fettywap',        'spotify_id': '6PXS4YHDkKvl1wkIl4V8DL'}, # Fetty Wap
+    {'twitter_tag': '@YoGotti',         'spotify_id': '6Ha4aES39QiVjR0L2lwuwq'}, # Yo Gotti
+    {'twitter_tag': '@G_Eazy',          'spotify_id': '02kJSzxNuaWGqwubyUba0Z'}, # G-Eazy
+    {'twitter_tag': '@LilTunechi',      'spotify_id': '55Aa2cqylxrFIXC767Z865'}, # Lil Wayne
+    {'twitter_tag': '@wizkhalifa',      'spotify_id': '137W8MRPWKqSmrBGDBFSop'}, # Wiz Khalifa
+    {'twitter_tag': 'not found',        'spotify_id': '2hWs22BmQkK4czFtDLnar2'}, # Rob Stone
     {'twitter_tag': '@_FloMilli',       'spotify_id': '08PvCOlef4xdOr20jFSTPd'}  # Flo Milli
 ]} # Set twitter to 'not found' if not have twitter account
