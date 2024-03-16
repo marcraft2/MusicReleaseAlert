@@ -254,6 +254,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '4CWO7nVttMNhjpLlX9Q96i'}, # Subtik
     {'twitter_tag': 'not found',        'spotify_id': '00Y1TGltKzvJj803cKj78H'}, # MKSN
     {'twitter_tag': 'not found',        'spotify_id': '2u3IM7qNMnBP18Ho8yrA4e'}, # Nelson Lean
+    {'twitter_tag': '@baboune_cc',      'spotify_id': '3NDWsXwlBk82FaYU7PlSDf'}, # Baboune
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'}  # 404Billy
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'},# Metro Boomin
