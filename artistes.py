@@ -62,7 +62,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@theodoramasse',   'spotify_id': '3PpJbrAbphauEun8Xf9tD2'}, # Theodora
     {'twitter_tag': '@htrip_v3',        'spotify_id': '27saeYYxYln4kmPbDrVRsz'}, # H'Trip
     {'twitter_tag': '@fxll221',         'spotify_id': '61H5pXHRcXCkcliWy4I05W'}, # Fxll
-    {'twitter_tag': '@bushi_lz',        'spotify_id': '2GIoAorOnT0Yp1jKyTzW7K'}, # Bushi
+    {'twitter_tag': '@bushi_stz',       'spotify_id': '2GIoAorOnT0Yp1jKyTzW7K'}, # Bushi
     {'twitter_tag': '@Tiakola_Meloo',   'spotify_id': '3vUMXQ9kPnZAQkMkZZ7Hfh'}, # Tiakola
     {'twitter_tag': '@Khaligidilit',    'spotify_id': '0rqQfmTWtmxzlrNmnruQXS'}, # Khali
     {'twitter_tag': '@1Freakey',        'spotify_id': '4K30jReY7UXKmG1Q93joPY'}, # FREAKEY!
@@ -255,6 +255,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '00Y1TGltKzvJj803cKj78H'}, # MKSN
     {'twitter_tag': 'not found',        'spotify_id': '2u3IM7qNMnBP18Ho8yrA4e'}, # Nelson Lean
     {'twitter_tag': '@baboune_cc',      'spotify_id': '3NDWsXwlBk82FaYU7PlSDf'}, # Baboune
+    {'twitter_tag': '@guamshawty',      'spotify_id': '0vbSHfdFi1kgacSkYepkmL'}, # Guamshawty
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'}  # 404Billy
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
@@ -293,7 +294,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@RussMillions',    'spotify_id': '3FoFW2AoUGRHBacC6i4x4p'}, # Russ Millions
     {'twitter_tag': '@1future',         'spotify_id': '1RyvyyTE3xzB2ZywiAwp0i'}, # Future
     {'twitter_tag': '@_bawo',           'spotify_id': '1nrJKGxkiSY6FjJRXcc9CB'}, # Bawo
-    {'twitter_tag': 'not found',        'spotify_id': '1zEx84twaro5PvvD3yTCom'}, # Anwzeezy
+    {'twitter_tag': '@Anweez_',         'spotify_id': '1zEx84twaro5PvvD3yTCom'}, # Anwzeezy
     {'twitter_tag': '@RapsAqua',        'spotify_id': '24wZhe5S2ElzaYdULrJPhV'}, # Aqua Raps
     {'twitter_tag': '@thouxanbanlee',   'spotify_id': '6CHTgEfOTvm5flR5Cpzw0I'}, # Swavy
     {'twitter_tag': '@jblxss',          'spotify_id': '2MErAFVwib6BaoHZa3GvWb'}, # BLXSS
