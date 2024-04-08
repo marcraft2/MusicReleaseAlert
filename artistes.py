@@ -257,6 +257,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@baboune_cc',      'spotify_id': '3NDWsXwlBk82FaYU7PlSDf'}, # Baboune
     {'twitter_tag': '@guamshawty',      'spotify_id': '0vbSHfdFi1kgacSkYepkmL'}, # Guamshawty
     {'twitter_tag': '@BekarNFR',        'spotify_id': '6wjkiUBMMYSIx5UBTp7eKC'}, # Bekar
+    {'twitter_tag': '@sxrxnxbigs',      'spotify_id': '2juymGEgJZTvtxOcnCWY17'}, # Serane
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'}  # 404Billy
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
@@ -399,7 +400,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@pierrebourne',    'spotify_id': '3x3jSlhyv5CiCZDZlaTq0M'}, # Pierre Bourne
     {'twitter_tag': '@therealjuicyj',   'spotify_id': '5gCRApTajqwbnHHPbr2Fpi'}, # Juicy J
     {'twitter_tag': '@JoellOrtiz',      'spotify_id': '5md3qSXO7cZirgp5eY5VGP'}, # Joell
-    {'twitter_tag': '@xxxtentacion',    'spotify_id': '15UsOTVnJzReFVN1VCnxy4'}, # XXX <3
+    {'twitter_tag': '@xxxtentacion',    'spotify_id': '15UsOTVnJzReFVN1VCnxy4'}, # XXX #RIP
     {'twitter_tag': 'not found',        'spotify_id': '1r29dFdSenwksTQdkH7r6I'}, # lil Shordie Scott
     {'twitter_tag': '@kcamp',           'spotify_id': '5bgfj5zUoWpyeVatGDjn6H'}, # K CAMP
     {'twitter_tag': '@kendricklamar',   'spotify_id': '2YZyLoL8N0Wb9xBt1NhZWg'}, # Kendrick Lamar
@@ -425,5 +426,6 @@ ARTISTES = {'fr': [
     {'twitter_tag': '@LilTunechi',      'spotify_id': '55Aa2cqylxrFIXC767Z865'}, # Lil Wayne
     {'twitter_tag': '@wizkhalifa',      'spotify_id': '137W8MRPWKqSmrBGDBFSop'}, # Wiz Khalifa
     {'twitter_tag': 'not found',        'spotify_id': '2hWs22BmQkK4czFtDLnar2'}, # Rob Stone
+    {'twitter_tag': '@ChiefKeef',       'spotify_id': '15iVAtD3s3FsQR4w1v6M0P'}, # Chief Keef
     {'twitter_tag': '@_FloMilli',       'spotify_id': '08PvCOlef4xdOr20jFSTPd'}  # Flo Milli
-]} # Set twitter to 'not found' if not have twitter account
+]}
