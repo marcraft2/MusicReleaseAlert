@@ -7,6 +7,7 @@ from datetime import datetime
 from datetime import timedelta
 import json
 import logging
+from logging.handlers import SysLogHandler
 import sqlite3
 
 from musicreleasealert.artists import ARTISTS
@@ -44,8 +45,8 @@ log_level = logging.getLevelName(config["log_level"].upper())
 logger = logging.getLogger(n)
 logger.setLevel(log_level)
 
-# slog = SysLogHandler(config["log_address"], config["log_facility"])
-slog = logging.StreamHandler()
+slog = SysLogHandler(config["log_address"], config["log_facility"])
+# slog = logging.StreamHandler()
 
 slog.setLevel(log_level)
 slog.setFormatter(logging.Formatter("MusicReleaseAlert: {message}", style="{"))
