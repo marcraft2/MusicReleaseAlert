@@ -56,5 +56,5 @@ crontab -e
 ```
 
 ```
-2,12,22,32,42,52 * * * * cd /usr/local/chronos-tools && /usr/bin/poetry run MusicReleaseAlert >> /var/log/MusicReleaseAlert.log 2>&1
+2,12,22,32,42,52 * * * * cd /usr/local/MusicReleaseAlert && /usr/bin/poetry run MusicReleaseAlert >> /var/log/MusicReleaseAlert.log 2>&1
 ```
