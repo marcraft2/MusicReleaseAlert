@@ -2,8 +2,8 @@
 
 ## Twitter
 
-- https://twitter.com/MusicReleaseAlertFR
-- https://twitter.com/MusicReleaseAlertUS
+- https://twitter.com/MusicReleaseFR
+- https://twitter.com/MusicReleaseUS
 
 ## Use Bot
 
