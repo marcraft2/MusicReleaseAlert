@@ -399,7 +399,7 @@ ARTISTES = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '6Jb1lWkhG604r5Ly1HCfvh'}, # Jelly
     {'twitter_tag': '@pierrebourne',    'spotify_id': '3x3jSlhyv5CiCZDZlaTq0M'}, # Pierre Bourne
     {'twitter_tag': '@therealjuicyj',   'spotify_id': '5gCRApTajqwbnHHPbr2Fpi'}, # Juicy J
-    {'twitter_tag': '@JoellOrtiz',      'spotify_id': '5md3qSXO7cZirgp5eY5VGP'}, # Joell
+    {'twitter_tag': '@CantSaveJoell',   'spotify_id': '5md3qSXO7cZirgp5eY5VGP'}, # Joell
     {'twitter_tag': '@xxxtentacion',    'spotify_id': '15UsOTVnJzReFVN1VCnxy4'}, # XXX #RIP
     {'twitter_tag': 'not found',        'spotify_id': '1r29dFdSenwksTQdkH7r6I'}, # lil Shordie Scott
     {'twitter_tag': '@kcamp',           'spotify_id': '5bgfj5zUoWpyeVatGDjn6H'}, # K CAMP
