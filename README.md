@@ -1,16 +1,16 @@
-# Spotify Twitter Alert
+# Music Release Twitter Alert
 
 ## Twitter
 
-https://twitter.com/SpotifyAlertFR
-https://twitter.com/SpotifyAlertUS
+- https://twitter.com/MusicReleaseAlertFR
+- https://twitter.com/MusicReleaseAlertUS
 
 ## Use Bot
 
 - Create Database:
 
 ```
-sqlite /var/SpotifyAlert/spotify.db
+sqlite /var/MusicReleaseAlert/releases.db
 ```
 
 ```
@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS last_release (
 - Set Configuration
 
 ```
-mkdir /etc/SpotifyAlert
-nano /etc/SpotifyAlert/SpotifyAlert.cfg
+mkdir /etc/MusicReleaseAlert
+nano /etc/MusicReleaseAlert/MusicReleaseAlert.cfg
 ```
 
 ```
-[SpotifyAlert]
+[MusicReleaseAlert]
 fr_twitter_consumer_key: xxx
 fr_twitter_consumer_secret: xx
 fr_twitter_access_token: xxx-xxx
@@ -46,7 +46,7 @@ us_twitter_access_token_secret: xxxx
 spotify_client_id: xxxx
 spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
-database_file: /var/SpotifyAlert/spotify.db
+database_file: /var/MusicReleaseAlert/spotify.db
 ```
 
 - Set cron
@@ -56,17 +56,5 @@ crontab -e
 ```
 
 ```
-2,12,22,32,42,52 * * * * cd /root/scripts/SpotifyAlert && /usr/bin/python3 /root/scripts/SpotifyAlert/SpotifyAlert.py >> /var/log/SpotifyAlert.log 2>&1
-```
-
-- Check live log
-
-```
-tail -f /var/log/daemon.log | grep SpotifyAlert
-```
-
-- Check old log
-
-```
-zgrep SpotifyAlert /var/log/daemon*
+2,12,22,32,42,52 * * * * cd /usr/local/chronos-tools && /usr/bin/poetry run MusicReleaseAlert >> /var/log/MusicReleaseAlert.log 2>&1
 ```

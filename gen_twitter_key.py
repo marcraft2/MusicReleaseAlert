@@ -1,6 +1,7 @@
-from requests_oauthlib import OAuth1Session
-import os
 import json
+import os
+
+from requests_oauthlib import OAuth1Session
 
 # In your terminal please set your environment variables by running the following lines of code.
 # export 'CONSUMER_KEY'='<your_consumer_key>'
@@ -9,7 +10,6 @@ import json
 consumer_key = os.environ.get("CONSUMER_KEY")
 consumer_secret = os.environ.get("CONSUMER_SECRET")
 
-# Be sure to add replace the text of the with the text you wish to Tweet. You can also add parameters to post polls, quote Tweets, Tweet with reply settings, and Tweet to Super Followers in addition to other features.
 payload = {"text": "Hello world!"}
 
 # Get request token
@@ -54,10 +54,10 @@ oauth = OAuth1Session(
     resource_owner_key=access_token,
     resource_owner_secret=access_token_secret,
 )
-print('twitter_consumer_key: '+consumer_key)
-print('twitter_consumer_secret: '+consumer_secret)
-print('xx_twitter_access_token: '+access_token)
-print('xx_twitter_access_token_secret: '+access_token_secret)
+print("twitter_consumer_key: " + consumer_key)
+print("twitter_consumer_secret: " + consumer_secret)
+print("xx_twitter_access_token: " + access_token)
+print("xx_twitter_access_token_secret: " + access_token_secret)
 
 # Making the request
 response = oauth.post(
@@ -67,10 +67,10 @@ response = oauth.post(
 
 if response.status_code != 201:
     raise Exception(
-        "Request returned an error: {} {}".format(response.status_code, response.text)
+        f"Request returned an error: {response.status_code} {response.text}"
     )
 
-print("Response code: {}".format(response.status_code))
+print(f"Response code: {response.status_code}")
 
 # Saving the response as JSON
 json_response = response.json()

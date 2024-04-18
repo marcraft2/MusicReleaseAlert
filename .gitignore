@@ -1,7 +1,8 @@
 .DS_Store
 **/.DS_Store
-SpotifyAlert.egg-info
+MusicReleaseAlert.egg-info
 dist
 build
 .cache
 **/__pycache__
+.venv/
