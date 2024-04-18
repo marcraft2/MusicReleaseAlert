@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS last_release (
 cd /usr/local/MusicReleaseAlert && /root/.local/bin/poetry run MusicReleaseAlert
 ```
 
-- Set cron (auto run every 20 minutes)
+- Set cron (auto run every 10 minutes)
 
 ```
 crontab -e
