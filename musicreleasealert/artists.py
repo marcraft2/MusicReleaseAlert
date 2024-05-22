@@ -48,6 +48,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': '@moshpxt',         'spotify_id': '5N2P9zB8202SrtnWCjqe1j'}, # thaHomey
     {'twitter_tag': '@Sadandsoloo',     'spotify_id': '0JKJ8w8dzJ894jec6ZtAkH'}, # Sadandsolo
     {'twitter_tag': '@BabyNeelou',      'spotify_id': '5bpO0XTVIGNUnClzfHHQUz'}, # BABY NEELOU
+    {'twitter_tag': '@exoslayer33',     'spotify_id': '63tUhBhAdgdZiS9kJVU9iW'}, # EXOSLAYER
     {'twitter_tag': '@kaytheprodigy_',  'spotify_id': '4ziOwyCpUFMlERkfyoEV6p'}, # Kay The Prodigy
     {'twitter_tag': '@_Squidji',        'spotify_id': '15LZyW96TXq91lUBjMHQok'}, # Squiji
     {'twitter_tag': '@JeyLaylow',       'spotify_id': '0LnhY2fzptb0QEs5Q5gM7S'}, # Laylow
@@ -61,7 +62,6 @@ ARTISTS = {'fr': [
     {'twitter_tag': '@prinzly888',      'spotify_id': '6CecCbMlZKpr8sovW5ucq1'}, # Prinzly
     {'twitter_tag': 'not found',        'spotify_id': '5OLkn5GT6EcMuJzjwgvQnu'}, # Vacra
     {'twitter_tag': '@gouapolaylay',    'spotify_id': '7rjdQx7OSfthvdWWgSM1e5'}, # Gouap RTTCLAN
-    {'twitter_tag': '@theodoramasse',   'spotify_id': '3PpJbrAbphauEun8Xf9tD2'}, # Theodora
     {'twitter_tag': '@htrip_v3',        'spotify_id': '27saeYYxYln4kmPbDrVRsz'}, # H'Trip
     {'twitter_tag': '@fxll221',         'spotify_id': '61H5pXHRcXCkcliWy4I05W'}, # Fxll
     {'twitter_tag': '@bushi_stz',       'spotify_id': '2GIoAorOnT0Yp1jKyTzW7K'}, # Bushi
@@ -88,7 +88,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '6BbceEVcjow8mhQPYK3eBK'}, # Skread
     {'twitter_tag': '@Orel_san',        'spotify_id': '4FpJcNgOvIpSBeJgRg3OfN'}, # Orelsan
     {'twitter_tag': '@raplume',         'spotify_id': '2ci4Or1nFI30YCiRS2YXV8'}, # Raplume
-    {'twitter_tag': 'not found',        'spotify_id': '0Su00YAdlLw2Aetn7RZLJj'}, # Skuna
+    {'twitter_tag': '@skunaboi',        'spotify_id': '0Su00YAdlLw2Aetn7RZLJj'}, # Skuna
     {'twitter_tag': '@varnishhh',       'spotify_id': '17o6H1EQGD90TQxJ4pErIU'}, # Varnish La Piscine
     {'twitter_tag': '@warendhide',      'spotify_id': '0kf4yD8VtffGwtLpbienGR'}, # WarEnd
     {'twitter_tag': '@JosmanOG',        'spotify_id': '6dbdXbyAWk2qx8Qttw0knR'}, # Josman
