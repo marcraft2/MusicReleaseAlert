@@ -45,7 +45,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': '@selugofficiel',   'spotify_id': '3j2UfwsNoDqcuoGh8gp0qi'}, # Selug
     {'twitter_tag': 'not found',        'spotify_id': '4aG6mP1P80gOIpELCWePG5'}, # $enar
     {'twitter_tag': '@Kenzy_onceagain', 'spotify_id': '7dV9demtG3FSpXaM7e5WbH'}, # Kenzy
-    {'twitter_tag': '@moshpxt',         'spotify_id': '5N2P9zB8202SrtnWCjqe1j'}, # thaHomey
+    {'twitter_tag': '@thvhomey',        'spotify_id': '5N2P9zB8202SrtnWCjqe1j'}, # thaHomey
     {'twitter_tag': '@Sadandsoloo',     'spotify_id': '0JKJ8w8dzJ894jec6ZtAkH'}, # Sadandsolo
     {'twitter_tag': '@BabyNeelou',      'spotify_id': '5bpO0XTVIGNUnClzfHHQUz'}, # BABY NEELOU
     {'twitter_tag': '@exoslayer33',     'spotify_id': '63tUhBhAdgdZiS9kJVU9iW'}, # EXOSLAYER
