@@ -221,9 +221,9 @@ def check_for_artiste(artist_id, twitter, lang):
                     track_name = item["name"]
                     if "(feat" in track_name:
                         track_name = (
-                            track_name.lsplit("(", 1)[0].strip()
+                            track_name.split("(", 1)[0].strip()
                             + " "
-                            + track_name.lsplit(")", 1)[1].strip()
+                            + track_name.split(")", 1)[1].strip()
                         )
 
                     new_line = " • {} (feat {}) - {}\n".format(
