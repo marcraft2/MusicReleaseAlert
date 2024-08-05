@@ -1,9 +1,4 @@
-# Music Release Twitter Alert
-
-## Twitter
-
-- https://twitter.com/MusicReleaseFR
-- https://twitter.com/MusicReleaseUS
+# Music Release Telegram Alert
 
 ## Use Bot
 
@@ -24,23 +19,6 @@ cd MusicReleaseAlert
 poetry install
 ```
 
-- Generate Twitter API Key
-
-Get your CONSUMER_KEY and CONSUMER_SECRET on [Developer Twitter Website](https://developer.twitter.com/en/portal/projects-and-apps)
-
-```
-export 'CONSUMER_KEY'='<your_consumer_key>'
-export 'CONSUMER_SECRET'='<your_consumer_secret>'
-python3 gen_twitter_key.py
-```
-
-Open the link, in your browser, with the account you wanted to tweet from. And Copy/Paste PIN code to terminal.
-Now copy your xx_twitter_consumer_key, xx_twitter_consumer_secret, xx_twitter_access_token, xx_twitter_access_token_secret for next step.
-
-
-For Spotify access, I recommend that you start the program for the first time on your machine, to generate the .cache file, once this file is created you can place it directly in the /usr/local/MusicReleaseAlert folder.
-
-
 
 - Set Configuration
 
@@ -51,18 +29,11 @@ nano /etc/MusicReleaseAlert/MusicReleaseAlert.cfg
 
 ```
 [MusicReleaseAlert]
-fr_twitter_consumer_key: xxx
-fr_twitter_consumer_secret: xx
-fr_twitter_access_token: xxx-xxx
-fr_twitter_access_token_secret: xxxx
-us_twitter_consumer_key: xxx
-us_twitter_consumer_secret: xx
-us_twitter_access_token: xxx-xxx
-us_twitter_access_token_secret: xxxx
 spotify_client_id: xxxx
 spotify_client_secret: xxxx
 spotify_redirect_uri: https://xxxxx.wtf
 database_file: /var/MusicReleaseAlert/spotify.db
+telegram_token: XXXXX
 ```
 
 - Create Database:
