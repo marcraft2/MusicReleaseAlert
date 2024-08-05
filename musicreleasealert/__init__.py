@@ -1,5 +1,5 @@
 """
-Spotify Twitter Bot - MusicReleaseAlert
+Spotify Telegram Bot - MusicReleaseAlert
 """
 
 from configparser import ConfigParser
@@ -9,22 +9,20 @@ import json
 import logging
 from logging.handlers import SysLogHandler
 import sqlite3
+import sys
+import urllib
 
 from musicreleasealert.artists import ARTISTS
 from requests_oauthlib import OAuth1Session
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from twitter_text import parse_tweet
+import asyncio
+from telegram import Bot
 
 # Configuration
 DEFAULT_CONFIG = {
     "MusicReleaseAlert": {
-        "twitter_consumer_key": "YOUR TWITTER consumer_key",
-        "twitter_consumer_secret": "YOUR TWITTER consumer_secret",
-        "fr_twitter_access_token": "YOUR TWITTER access_token",
-        "fr_twitter_access_token_secret": "YOUR TWITTER access_token_secret",
-        "us_twitter_access_token": "YOUR TWITTER access_token",
-        "us_twitter_access_token_secret": "YOUR TWITTER access_token_secret",
+        "telegram_token": "XXX",
         "spotify_client_id": "YOUR SPOTIFY client_id",
         "spotify_client_secret": "YOUR SPOTIFY client_secret",
         "spotify_redirect_uri": "YOUR SPOTIFY redirect_uri",
@@ -90,35 +88,6 @@ def album_exist(album_id):
         return False
 
 
-def send_tweet(text, lang):
-    payload = {"text": text}
-    oauth = OAuth1Session(
-        client_key=config["twitter_consumer_key"],
-        client_secret=config["twitter_consumer_secret"],
-        resource_owner_key=config[lang + "_twitter_access_token"],
-        resource_owner_secret=config[lang + "_twitter_access_token_secret"],
-    )
-
-    response = oauth.post(
-        "https://api.twitter.com/2/tweets",
-        json=payload,
-    )
-
-    if response.status_code != 201:
-        msg = "Request returned an error: {} {}".format(
-            response.status_code, response.text
-        )
-        logger.info(msg)
-        raise Exception(msg)
-
-    json_response = response.json()
-    str_ = json.dumps(json_response, indent=4, sort_keys=True)
-    data = json.loads(str_)
-    logger.info(
-        "New Tweet -> https://twitter.com/x/status/{}".format(data["data"]["id"])
-    )
-
-
 def convert_duration(duration_ms):
     duration_sec = duration_ms // 1000
     hours = duration_sec // 3600
@@ -146,8 +115,35 @@ def is_date_less_than_2_days_ago(date_string):
     else:
         return False
 
+def cleanup_str(s):
+    return s.replace('_', '\_') \
+          .replace('*', '\*') \
+          .replace('[', '\[') \
+          .replace(']', '\]') \
+          .replace('(', '\(') \
+          .replace(')', '\)') \
+          .replace('~', '\~') \
+          .replace('`', '\`') \
+          .replace('>', '\>') \
+          .replace('#', '\#') \
+          .replace('+', '\+') \
+          .replace('-', '\-') \
+          .replace('=', '\=') \
+          .replace('|', '\|') \
+          .replace('{', '\{') \
+          .replace('}', '\}') \
+          .replace('.', '\.') \
+          .replace('!', '\!')
 
-def check_for_artiste(artist_id, twitter, lang):
+
+def send_telegram_message(msg="Hello World", chat_id='-4214946076'):
+    bot = Bot(token=config['telegram_token'])
+    async def send_message():
+        await bot.send_message(chat_id=chat_id, text=msg, parse_mode='MarkdownV2')
+    asyncio.run(send_message())
+
+
+def check_for_artiste(artist_id, lang):
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(
             client_id=config["spotify_client_id"],
@@ -158,7 +154,8 @@ def check_for_artiste(artist_id, twitter, lang):
     )
 
     r = sp.artist(artist_id)
-    artist_name = r["name"]
+
+    artist_name = f"[{r['name']}](https://open.spotify.com/artist/{artist_id})"
 
     albums = sp.artist_albums(artist_id, limit=20)
     latest_releases = sorted(
@@ -185,20 +182,10 @@ def check_for_artiste(artist_id, twitter, lang):
             else:
                 album_type = release["album_type"]
 
-            if twitter == "not found":
-                TWEET = "New {} by {}\n\n{} - {}\n\nTrack:\n".format(
-                    album_type, artist_name, release["name"], release["release_date"]
-                )
-            else:
-                TWEET = "New {} by {} ({})\n\n{} - {}\n\nTrack:\n".format(
-                    album_type,
-                    artist_name,
-                    twitter,
-                    release["name"],
-                    release["release_date"],
-                )
+            _MSG = "New {} by {}\n\n[{}]({}) \- {}\n\nTrack:\n".format(
+                album_type, artist_name, release["name"], release["external_urls"]["spotify"], cleanup_str(release["release_date"])
+            )
 
-            failed_line = False
 
             for item in r["items"]:
                 artites_lists = []
@@ -206,48 +193,42 @@ def check_for_artiste(artist_id, twitter, lang):
                 for art in item["artists"]:
                     if art["id"] == artist_id:
                         continue
-                    name_ = art["name"]
-                    for artiste in ARTISTS["fr"] + ARTISTS["us"]:
-                        if (
-                            art["id"] == artiste["spotify_id"]
-                            and artiste["twitter_tag"] != "not found"
-                        ):
-                            name_ = artiste["twitter_tag"]
 
-                    artites_lists.append(name_)
+                    artites_lists.append(art['name'])
 
                 r_track = sp.track(item["id"])
                 if len(artites_lists):
                     track_name = item["name"]
                     if "(feat" in track_name:
-                        track_name = (
-                            track_name.split("(", 1)[0].strip()
-                            + " "
-                            + track_name.split(")", 1)[1].strip()
-                        )
+                        try:
+                            track_name = (
+                                track_name.split("(", 1)[0].strip()
+                                + " "
+                                + track_name.split(")", 1)[1].strip()
+                            )
+                        except Exception as e:
+                            logger.info(f'ERROR: Fail to edit feat: {track_name} => {e}')
+                            pass
 
-                    new_line = " • {} (feat {}) - {}\n".format(
-                        track_name,
-                        ", ".join(artites_lists),
+                    new_line = " • {} \(feat {}\) \- {}\n".format(
+                        cleanup_str(track_name),
+                        cleanup_str(", ".join(artites_lists)),
                         convert_duration(r_track["duration_ms"]),
                     )
                 else:
-                    new_line = " • {} - {}\n".format(
-                        item["name"], convert_duration(r_track["duration_ms"])
+                    new_line = " • {} \- {}\n".format(
+                        cleanup_str(item["name"]), convert_duration(r_track["duration_ms"])
                     )
 
-                if parse_tweet(TWEET + new_line).asdict()["weightedLength"] < 250:
-                    TWEET = TWEET + new_line
-                else:
-                    failed_line = True
-
-            if failed_line:
-                TWEET = TWEET + "[...]\n"
-
-            TWEET = TWEET + release["external_urls"]["spotify"]
+                _MSG = _MSG + new_line
 
             if is_date_less_than_2_days_ago(release["release_date"]):
-                send_tweet(TWEET, lang)
+                try:
+                    send_telegram_message(_MSG)
+                except Exception as e:
+                    print(_MSG)
+                    sys.exit(1)
+
             else:
                 logger.info(
                     "Old Release {} - {} {} {}".format(
@@ -276,13 +257,10 @@ def check_for_artiste(artist_id, twitter, lang):
 
 def main():
     logger.info(f"{n} started")
-
-    #   send_tweet('Hello World! This is a Test LL', 'fr')
-    #   send_tweet('Hello World! This is a Test LL', 'us')
-
+    
     for lang in ["fr", "us"]:
         for artiste in ARTISTS[lang]:
-            check_for_artiste(artiste["spotify_id"], artiste["twitter_tag"], lang)
+            check_for_artiste(artiste["spotify_id"], lang)
 
     logger.info(f"{n} ended")
 
