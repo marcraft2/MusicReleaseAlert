@@ -183,7 +183,7 @@ def check_for_artiste(artist_id, lang):
                 album_type = release["album_type"]
 
             _MSG = "New {} by {}\n\n[{}]({}) \- {}\n\nTrack:\n".format(
-                album_type, artist_name, release["name"], release["external_urls"]["spotify"], cleanup_str(release["release_date"])
+                album_type, artist_name, cleanup_str(release["name"]), release["external_urls"]["spotify"], cleanup_str(release["release_date"])
             )
 
 
