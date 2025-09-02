@@ -264,7 +264,8 @@ ARTISTS = {'fr': [
     {'twitter_tag': '@404Officiel',     'spotify_id': '5xMkiuMCSS13z5shShg7Mz'}, # 404Billy
     {'twitter_tag': '@1PLIKE140',       'spotify_id': '4Ue6MAZqz18NlaOQomRXLU'}, # 1PLIKE140
     {'twitter_tag': '@Hladrogue',       'spotify_id': '2tgTUUrbrQd6iuAjW5BQI7'}, # H.LA DROGUE
-    {'twitter_tag': '@Ven1_92',         'spotify_id': '3Cz37xnWAOtQEa5jfrTUbL'}  # VEN1
+    {'twitter_tag': '@Ven1_92',         'spotify_id': '3Cz37xnWAOtQEa5jfrTUbL'},  # VEN1
+    {'twitter_tag': '@elyslime',        'spotify_id': '01TiobRxuXvRkwBj9x0bay'}  # elyslime!
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
     {'twitter_tag': '@DonToliver',      'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
