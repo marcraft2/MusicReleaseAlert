@@ -269,6 +269,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '1wRx48q25O8HPDTyNOUQ2k'}, # 630G
     {'twitter_tag': 'not found',        'spotify_id': '4Mh8SbD6PTE2qpg506iHbT'}, # 34murphy
     {'twitter_tag': 'not found',        'spotify_id': '1KH2vOwMWmTGgLJec8aLzQ'}, # ARTR
+    {'twitter_tag': 'not found',        'spotify_id': '78iJ2FMbYAFY3djO4PbWZi'}, # La Mano 1.9
     {'twitter_tag': 'not found',        'spotify_id': '3S8r9fkqybCCXJLhZGA3r1'}  # Cinco
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
