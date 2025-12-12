@@ -271,6 +271,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '1KH2vOwMWmTGgLJec8aLzQ'}, # ARTR
     {'twitter_tag': 'not found',        'spotify_id': '78iJ2FMbYAFY3djO4PbWZi'}, # La Mano 1.9
     {'twitter_tag': 'not found',        'spotify_id': '3S8r9fkqybCCXJLhZGA3r1'}  # Cinco
+    {'twitter_tag': 'not found',        'spotify_id': '7l6m2BySHwnjJuw22SXwh5'}, # Limsa d'Aulnay
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
     {'twitter_tag': '@DonToliver',      'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
