@@ -272,7 +272,11 @@ ARTISTS = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '78iJ2FMbYAFY3djO4PbWZi'}, # La Mano 1.9
     {'twitter_tag': 'not found',        'spotify_id': '3S8r9fkqybCCXJLhZGA3r1'},  # Cinco
     {'twitter_tag': 'not found',        'spotify_id': '7l6m2BySHwnjJuw22SXwh5'}, # Limsa d'Aulnay
-    {'twitter_tag': 'not found',        'spotify_id': '4hYxvgmTzS29XAXlo5adgM'}  # L2B
+    {'twitter_tag': 'not found',        'spotify_id': '4hYxvgmTzS29XAXlo5adgM'}, # L2B
+    {'twitter_tag': 'not found',        'spotify_id': '0j88iwyJrnRpKBhiJtG0je'}, # Jeune Morty
+    {'twitter_tag': 'not found',        'spotify_id': '3LkkxNCsK47Af8vXoIVG0L'}, # Sherifflazone
+    {'twitter_tag': 'not found',        'spotify_id': '4tTvRdLVGAsJyk9lEEx3Xb'}, # Jeune Lion
+    {'twitter_tag': 'not found',        'spotify_id': '2jZ78PLlC1PuYKQ2bVwRvz'}  # Jolagreen23    
 ], 'us': [
     {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
     {'twitter_tag': '@DonToliver',      'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
