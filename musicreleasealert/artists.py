@@ -278,6 +278,7 @@ ARTISTS = {'fr': [
     {'twitter_tag': 'not found',        'spotify_id': '3LkkxNCsK47Af8vXoIVG0L'}, # Sherifflazone
     {'twitter_tag': 'not found',        'spotify_id': '4tTvRdLVGAsJyk9lEEx3Xb'}, # Jeune Lion
     {'twitter_tag': 'not found',        'spotify_id': '2jZ78PLlC1PuYKQ2bVwRvz'}  # Jolagreen23
+    {'twitter_tag': 'not found',        'spotify_id': '3d9RzVPHuIhQ6UMJS2qI1B'}  # ELIESG (BeatMaker)   
 ], 'us': [
 #    {'twitter_tag': '@metroboomin',     'spotify_id': '0iEtIxbK0KxaSlF7G42ZOp'}, # Metro Boomin
 #    {'twitter_tag': '@DonToliver',      'spotify_id': '4Gso3d4CscCijv0lmajZWs'}, # Don Toliver
